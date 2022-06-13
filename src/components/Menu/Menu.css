@@ -1,0 +1,39 @@
+.menu{
+    max-width:600px;
+    margin:40px auto 0 ;
+    border:8px solid #16219e;
+    padding:2em;
+    background-color: white;
+}
+.menu > div {
+    display:flex;
+   justify-content: space-between;
+
+}
+
+.title{
+    color:#16219e;
+}
+
+.foodImg {
+    height:64px;
+    margin-top:0.5em;
+}
+.dishes{
+    display:flex;
+    justify-content: space-between;
+}
+.dishName{
+    color:#16219e;
+}
+.dishDescription{
+    color:#16219e;
+    font-weight:400;
+}
+
+.dishPrice{
+    color:#16219e;
+}
+.dishPrice::after {
+    content: "€";
+  }
