@@ -34,9 +34,9 @@
 .dishPrice{
     color:#16219e;
 }
-.dishPrice::after {
+/* .dishPrice::after {
     content: "€";
-  }
+  } */
 
   @media (max-width: 680px) {
 
