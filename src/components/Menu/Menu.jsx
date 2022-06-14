@@ -9,7 +9,7 @@ function Menu({dishes}) {
           <h2 className="dishName">{elemento.name}</h2>
           <h3 className="dishDescription">{elemento.description}</h3>
         </div>
-        <h2 className="dishPrice">{elemento.price}</h2>
+        <h2 className="dishPrice">{elemento.price.toFixed(2)}</h2>
       </div>
     );
    });
