@@ -73,6 +73,7 @@ const Reservation = () => {
               onChange={handleInputChange}
               name="date"
               className="inputDate"
+              min={new Date().toISOString().split("T")[0]}
             />
           </div>
         </div> 
