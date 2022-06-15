@@ -2,21 +2,16 @@ import { useState } from "react";
 import "./Reservation.css";
 let reservations = JSON.parse(localStorage.getItem("RESERVATIONS")) || [];
 const Reservation = () => {
-  const [data, setData] = useState({
-    username: "",
-    pax: "",
-    email: "",
-    date: "",
-  });
-
-  const [btnDisabled, setBtnDisabled] = useState(true);
-  const [message, setMessage] = useState("");
   const initialState = {
     username: "",
     email: "",
     pax: "",
     date: "",
   };
+  const [data, setData] = useState(initialState);
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [message, setMessage] = useState("");
+  
 
   const clearState = () => {
     setData({ ...initialState });
