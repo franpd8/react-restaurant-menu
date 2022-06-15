@@ -1,17 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Menu from "./components/Menu/Menu";
-import menuDishes from "./components/constants/dishes";
-import sandwhichImg from "./assets/sandwhich.png"
-import tapasImg from "./assets/tapas.png"
-
+import Menus from "./components/Menus/Menus";
+import Reservation from "./components/Reservation/Reservation";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Menu dishes={menuDishes.sandwhiches} title={"Sandwiches"} image={sandwhichImg} />
-      <Menu dishes={menuDishes.tapas} title={"Tapas"} image={tapasImg} />
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/menu" element={ <Menus />} />
+          <Route path="/reservation" element={ <Reservation />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
